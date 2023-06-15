@@ -30,7 +30,7 @@ public function getOneById(int $id): ServiceMapping
     
 public function getAll() {
 
-        $query = $this->connect->prepare("SELECT * FROM cmc_service");
+        $query = $this->pdo->prepare("SELECT * FROM cmc_service");
             $query->execute();
             $service = $query->fetchAll();
             $service = [];
